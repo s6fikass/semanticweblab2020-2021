@@ -6,16 +6,16 @@ This repository is to used to collect presentations and source codes for the sem
 
 
 ## Description
-In this lab you will have to implement Intelligent algorithms that works on knowledgegraphs and also manipulate rdf Data, 
-Other topics may include implementing Explainable AI algorithms using programming language such as (python , scala , ...).
+In this lab you will implement intelligent algorithms that work on knowledge graphs and also manipulate RDF data. 
+Other topics may include implementing Explainable AI algorithms using Python and Scala.
 
 * Short presentations (5 min) are required biweekly.
-* No final project Report is required but Code Documentaion is required.
-* Solutions would be evaliated using peer review.
+* No final project report is required but a detailed documentaion must be delivered at the end of the lab.
+* The final deliverables (code and documentation) will be peer-evaluated.
 * Final presentation (20 min).
 
 ## Time table
-The participation in the first meeting is compulsury for all master students who wish to participate in the Lab Semantic Data Web.
+The participation in the first meeting is compulsury for all master students who wish to participate in the Lab Semantic Data Web Technologies.
 
 
 | Date  	|  Title 	|  Reason  	|
