@@ -6,7 +6,7 @@ This repository is to used to collect presentations and source codes for the sem
 
 
 ## Description
-In this lab you will implement intelligent algorithms that work on knowledge graphs and also manipulate RDF data. 
+In this lab, you will implement intelligent algorithms that work on knowledge graphs and also manipulate RDF data. 
 Other topics may include implementing Explainable AI algorithms using Python and Scala.
 
 * Short presentations (5 min) are required biweekly.
