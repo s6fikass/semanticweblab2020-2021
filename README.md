@@ -20,6 +20,6 @@ The participation in the first meeting is compulsury for all master students who
 
 | Date  	|  Title 	|  Reason  	|
 |---	|---	|---	|
-| 30.10.2020 10:00-12:00  	| First meeting  	| Topic prresnting and distribution  	|
+| 30.10.2020, 10:00-12:00  	| First meeting  	| Topic presentation and assignment  	|
 |   	|   	|   	|
 |   	|   	|   	|
