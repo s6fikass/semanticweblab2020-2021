@@ -1,4 +1,4 @@
-# semanticweblab2020-2021
+# Semantic Web Lab 2020-2021
 
 This repository is to used to collect presentations and source codes for the semantic web lab.
 
