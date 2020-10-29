@@ -20,6 +20,6 @@ The participation in the first meeting is compulsury for all master students who
 
 |  Date  	|  Title  	|  Reason  	|  Link     |
 |---	|---	|---	|---    |
-| 30.10.2020, 10:00-12:00  	| First meeting  	| Topic presentation and assignment  	| [Zoom-Link](https://uni-bonn.zoom.us/j/97543249600?pwd=RExkWHlGYmhBOElVUUVGKzc5VVU2UT09)   |
-|   	|   	|   	|       |
+| 30.10.2020, 10:15-12:00  	| First meeting  	| Topic presentation and assignment  	| [Zoom-Link](https://uni-bonn.zoom.us/j/97543249600?pwd=RExkWHlGYmhBOElVUUVGKzc5VVU2UT09)   |
+| 13.11.2020, 10:15-12:00  	| Group introduction  	| Present your group and your topic to your colleagues  	| [Zoom-Link](https://uni-bonn.zoom.us/j/97543249600?pwd=RExkWHlGYmhBOElVUUVGKzc5VVU2UT09)   |
 |   	|   	|   	|       |
