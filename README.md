@@ -26,4 +26,4 @@ The participation in the first meeting is compulsury for all master students who
 | 27.11.2020, 10:15-12:00  (Optional)	| Neural Network trainingsessions 2  	|   	| 
 | 11.12.2020, 10:15-12:00  	| First Status Update  	| Present your current progess to your colleagues  	| [Zoom-Link](https://uni-bonn.zoom.us/j/97543249600?pwd=RExkWHlGYmhBOElVUUVGKzc5VVU2UT09)   |
 | 29.01.2021, 10:15-12:00  	| Second Status Update  	| Present your current progess to your colleagues  	| [Zoom-Link](https://uni-bonn.zoom.us/j/97543249600?pwd=RExkWHlGYmhBOElVUUVGKzc5VVU2UT09)   |
-| 26.02.2021, 10:15-12:00  	| Final Presentations  	| Present your results to your colleagues  	| [Zoom-Link](https://uni-bonn.zoom.us/j/97543249600?pwd=RExkWHlGYmhBOElVUUVGKzc5VVU2UT09)   |
+| 26.02.2021, 10:00-12:00  	| Final Presentations  	| Present your results to your colleagues  	| [Zoom-Link](https://uni-bonn.zoom.us/j/97543249600?pwd=RExkWHlGYmhBOElVUUVGKzc5VVU2UT09)   |
