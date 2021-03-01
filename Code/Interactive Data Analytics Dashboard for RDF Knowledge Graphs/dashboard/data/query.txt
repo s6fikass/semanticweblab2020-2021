@@ -1,0 +1,19 @@
+aifb_fixed_complete
+
+
+
+select (COUNT(?person)  as ?cnt)  ?name where {
+  ?person <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Person> . 
+  
+  ?person <http://swrc.ontoware.org/ontology#affiliation> ?aff .
+
+  #  ?aff a <http://swrc.ontoware.org/ontology#affiliation>.
+  ?aff <http://swrc.ontoware.org/ontology#name> ?name .
+} group by ?name
+
+
+
+
+karl3
+
+where {<http://de.dbpedia.org/resource/Karlsruhe> ?p ?o .}

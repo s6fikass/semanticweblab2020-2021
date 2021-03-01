@@ -1,0 +1,147 @@
+Members of the French National Assembly born out of France,"SELECT DISTINCT ?item ?itemLabel ?placeLabel ?countryLabel
+WHERE
+{
+  ?item wdt:P39 wd:Q3044918 .
+  ?item wdt:P19 ?place .
+  ?place wdt:P17 ?country .
+  FILTER NOT EXISTS { ?place wdt:P17 wd:Q142 . }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language ""fr"" . }
+}
+ORDER BY ?countryLabel ?itemLabel",https://query.wikidata.org/sparql
+Number of jurisdictions by driving side,"SELECT ?sideLabel (COUNT(?jurisdiction) AS ?count)
+WHERE
+{
+  ?jurisdiction wdt:P1622 ?side.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language ""en"". }
+}
+GROUP BY ?sideLabel
+ORDER BY ?sideLabel",https://query.wikidata.org/sparql
+Number of dead people by month since 2000,"SELECT  ?yearmonth (COUNT(?person) as ?count)
+WHERE
+{
+  ?person wdt:P31 wd:Q5;
+          p:P570/psv:P570 [
+                wikibase:timePrecision ?precision ;
+                wikibase:timeValue ?date ;
+              ] .
+  BIND(CONCAT(STR(YEAR(?date)),""-"",STR(MONTH(?date))) as ?yearmonth).
+  FILTER( ?date >= ""2000-01-01T00:00:00""^^xsd:dateTime )
+  FILTER( ?precision >= ""10""^^xsd:integer ) # precision of at least month
+}
+GROUP BY ?yearmonth",https://query.wikidata.org/sparql
+Number of films starring leonardo Di caprio.,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT COUNT(DISTINCT ?uri) 
+WHERE {
+ ?uri rdf:type dbo:Film .
+        ?uri dbo:starring res:Leonardo_DiCaprio . 
+}",http://dbpedia.org/sparql
+20th-century earthquakes,"SELECT
+?earthquakeItem ?earthquake ?coord ?year
+(xsd:integer(?mercalliScaleString) AS ?mercalliScale) 
+?numOfDeath
+WHERE {
+  ?earthquakeItem wdt:P31 wd:Q7944 .
+  OPTIONAL { ?earthquakeItem wdt:P625 ?coord . }
+  OPTIONAL { ?earthquakeItem wdt:P585 ?time . }
+  OPTIONAL { ?earthquakeItem wdt:P1120 ?numOfDeath . }
+  OPTIONAL { ?earthquakeItem wdt:P2784 [ p:P361 [ps:P361 wd:Q170350 ; # Mercalli intensity scale
+                                                 pq:P1545 ?mercalliScaleString ] ] . }
+  BIND (YEAR(?time) AS ?year) .
+  FILTER (?year >= 1900 && ?year < 2000) .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language ""en"".
+                           ?earthquakeItem rdfs:label ?earthquake . }
+}
+ORDER BY DESC(?mercalliScale)",https://query.wikidata.org/sparql
+All museums (including subclass of museum) in Barcelona with coordinates,"SELECT DISTINCT ?item ?name ?coord ?lat ?lon
+WHERE
+{
+ hint:Query hint:optimizer ""None"" .
+ ?item wdt:P131* wd:Q1492 .
+ ?item wdt:P31/wdt:P279* wd:Q33506 .
+ ?item wdt:P625 ?coord .
+ ?item p:P625 ?coordinate .
+ ?coordinate psv:P625 ?coordinate_node .
+ ?coordinate_node wikibase:geoLatitude ?lat .
+ ?coordinate_node wikibase:geoLongitude ?lon .
+ SERVICE wikibase:label {
+ bd:serviceParam wikibase:language ""ca"" .
+ ?item rdfs:label ?name
+ }
+}
+ORDER BY ASC (?name)",https://query.wikidata.org/sparql
+"All people born in
+London between 1900-1950","PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?name ?birth ?death
+WHERE {
+?person dbo:birthPlace dbr:London .
+?person dbo:birthDate ?birth .
+?person rdfs:label ?name FILTER (lang(?name) = ""en"").
+OPTIONAL { ?person dbo:deathDate ?death . }
+FILTER ((?birth > ""1900-01-01""^^xsd:date) &&
+(?birth < ""1950-01-01""^^xsd:date)) .
+}
+ORDER BY (?birth)",http://dbpedia.org/sparql
+"Names of the universities
+that were established in English speaking countries before
+the beginning of the 20th century","PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?uniName ?cName ?students
+WHERE {
+?uni rdf:type dbo:University ;
+foaf:name ?uniName FILTER (lang(?uniName)=""en"").
+?uni dbp:established ?creationDate ;
+dbo:country ?country .
+?country dbo:language dbr:English_language ;
+foaf:name ?cName FILTER (lang(?cName)=""en"") .
+OPTIONAL { ?uni dbo:numberOfUndergraduateStudents ?students . }
+FILTER ( ?creationDate < ""1900-01-01""^^xsd:date ) .
+}
+ORDER BY (?creationDate)",http://dbpedia.org/sparql
+"Soccer players, who are born in a country with more than 10 million inhabitants","PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct ?soccerplayer ?countryOfBirth ?team ?countryOfTeam ?stadiumcapacity
+{ 
+?soccerplayer a dbo:SoccerPlayer ;
+   dbo:position|dbp:position <http://dbpedia.org/resource/Goalkeeper_(association_football)> ;
+   dbo:birthPlace/dbo:country* ?countryOfBirth ;
+   #dbo:number 13 ;
+   dbo:team ?team .
+   ?team dbo:capacity ?stadiumcapacity ; dbo:ground ?countryOfTeam . 
+   ?countryOfBirth a dbo:Country ; dbo:populationTotal ?population .
+   ?countryOfTeam a dbo:Country .
+FILTER (?countryOfTeam != ?countryOfBirth)
+FILTER (?stadiumcapacity > 30000)
+FILTER (?population > 10000000)
+} order by ?soccerplayer",http://dbpedia.org/sparql
+List all concepts,"PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
+SELECT ?concept
+WHERE {
+   ?concept a skos:Concept .
+}",https://agrovoc.uniroma2.it/sparql/
+"Search for all concepts that have an English preflabel but ""German missing"" while omitting those which are clearly marked as scientific names","PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#> 
+SELECT ?concept ?literal where { 
+ ?concept skosxl:prefLabel ?pl. 
+ MINUS {?concept <http://aims.fao.org/aos/agrontology#hasTaxonomicRank> ?t.} 
+ MINUS { 
+  ?pl <http://aims.fao.org/aos/agrontology#hasTermType> ?termtype . 
+  FILTER (regex(?termtype, ""Taxonomic terms for plants"") || regex(?termtype, ""Taxonomic terms for animals"")) 
+ } 
+ ?pl skosxl:literalForm ?literal. 
+ FILTER regex(str(?pl), ""xl_en"") 
+ FILTER NOT EXISTS { 
+  ?concept skosxl:prefLabel ?depl 
+  FILTER regex(str(?depl), ""xl_ro"") 
+ } 
+}",https://agrovoc.uniroma2.it/sparql/

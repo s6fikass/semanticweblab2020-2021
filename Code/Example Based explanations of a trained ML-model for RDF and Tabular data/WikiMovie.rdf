@@ -1,0 +1,1500 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-91 "http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-102#"
+     xml:base="http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-102"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology-91="http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-102"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#nationality_is -->
+
+    <owl:AnnotationProperty rdf:about="&untitled-ontology-91;nationality_is"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#acted_in -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;acted_in"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#directed_by -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;directed_by">
+        <rdfs:range rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#distributed_by -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;distributed_by">
+        <rdfs:range rdf:resource="&untitled-ontology-91;Distribution_company"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#genres_is -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;genres_is">
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdfs:range rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#has_spouse -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;has_spouse">
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Person"/>
+        <rdfs:range rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#in_language -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;in_language">
+        <rdfs:range rdf:resource="&untitled-ontology-91;Language"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#made_at -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;made_at"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#produced_by -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;produced_by">
+        <rdfs:range rdf:resource="&untitled-ontology-91;Film_producer"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#screenplay_by -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;screenplay_by">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#shot_at -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;shot_at">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-91;made_at"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#starring -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;starring">
+        <rdfs:range rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+        <owl:inverseOf rdf:resource="&untitled-ontology-91;acted_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#won_award -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;won_award">
+        <rdfs:range rdf:resource="&untitled-ontology-91;Notable_award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#written_by -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-91;written_by">
+        <rdfs:range rdf:resource="&untitled-ontology-91;Film_writer"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#based_on -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-91;based_on">
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#cause_of_death -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-91;cause_of_death">
+        <rdfs:domain rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Actor -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Actor">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Black-and-white_documentary_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Black-and-white_documentary_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Black-and-white_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Black-and-white_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Black-and-white_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Country -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Distribution_company -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Distribution_company"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Documentary_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Documentary_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Fan_films_based_on_DC_Comics‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Fan_films_based_on_DC_Comics‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Fan_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Fan_films_based_on_Indiana_Jones‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Fan_films_based_on_Indiana_Jones‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Fan_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Fan_films_based_on_Marvel_Comics‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Fan_films_based_on_Marvel_Comics‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Fan_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Fan_films_based_on_Star_Wars‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Fan_films_based_on_Star_Wars‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Fan_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Fan_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Fan_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Film_director -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Film_director">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Film_producer -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Film_producer">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Film_screenwriter -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Film_screenwriter">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Film_writer -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Film_writer">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Independent_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Independent_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Indian_documentary_films -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Indian_documentary_films">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Internet_documentary_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Internet_documentary_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Internet_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Internet_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Internet_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Language -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Language"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Lost_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Lost_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Movie -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Movie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Music_director -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Music_director">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#New_Zealand_documentary_films -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;New_Zealand_documentary_films">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Notable_award -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Notable_award"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Our_Gang_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Our_Gang_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Black-and-white_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Person -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Prequel_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Prequel_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Production_Company -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Production_Company"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Reboot_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Reboot_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Sequel_films‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Sequel_films‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#Short_film -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;Short_film">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#YouTube_videos‎ -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;YouTube_videos‎">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Internet_films‎"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#genres -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;genres"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#lyricist -->
+
+    <owl:Class rdf:about="&untitled-ontology-91;lyricist">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#aaron_wolf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;aaron_wolf">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_writer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#action -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;action">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#adventure -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;adventure">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#amy_adams -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;amy_adams">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;man_of_steel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#anand_patwardhan -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;anand_patwardhan">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#animation -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;animation">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#anthony_hinds -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;anthony_hinds"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#average_betty -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;average_betty">
+        <rdf:type rdf:resource="&untitled-ontology-91;Internet_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;YouTube_videos‎"/>
+        <untitled-ontology-91:won_award rdf:resource="&untitled-ontology-91;yahoo!_video_award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#b-reel_films -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;b-reel_films">
+        <rdf:type rdf:resource="&untitled-ontology-91;Distribution_company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#back_stage_(1923_film) -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;back_stage_(1923_film)">
+        <rdf:type rdf:resource="&untitled-ontology-91;Black-and-white_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Our_Gang_films‎"/>
+        <untitled-ontology-91:written_by rdf:resource="&untitled-ontology-91;harold_eugene"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;harold_eugene"/>
+        <untitled-ontology-91:distributed_by rdf:resource="&untitled-ontology-91;pathé_exchange"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;robert_francis_mcGowan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#bartok_prize,jean_rouch_film_international_film_festival,_2012 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;bartok_prize,jean_rouch_film_international_film_festival,_2012">
+        <rdf:type rdf:resource="&untitled-ontology-91;Notable_award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#billy_crystal -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;billy_crystal">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;monsters_university"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#bombay:_our_city -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;bombay:_our_city">
+        <rdf:type rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Indian_documentary_films"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;anand_patwardhan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#carolynne_cunningham -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;carolynne_cunningham"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#chicago_film_critics_association_award -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;chicago_film_critics_association_award">
+        <rdf:type rdf:resource="&untitled-ontology-91;Notable_award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#christopher_lee -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;christopher_lee">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;dracula_(1958_film)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#christopher_nolan -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;christopher_nolan"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#comedy -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;comedy">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#crime -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;crime">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#csey_pugh -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;csey_pugh">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#damien_echols -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;damien_echols"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#dan_scanlon -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;dan_scanlon">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#dan_wolf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;dan_wolf">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_writer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#david_lynch -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;david_lynch">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#dirt_merchant -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;dirt_merchant">
+        <rdf:type rdf:resource="&untitled-ontology-91;Internet_documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Internet_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#dracula_(1958_film) -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;dracula_(1958_film)">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Reboot_films‎"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;anthony_hinds"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;christopher_lee"/>
+        <untitled-ontology-91:written_by rdf:resource="&untitled-ontology-91;jimmy_sangster"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;peter_cushing"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;terence_fisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#english -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;english">
+        <rdf:type rdf:resource="&untitled-ontology-91;Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#erotica -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;erotica">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#facebook -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;facebook">
+        <rdf:type rdf:resource="&untitled-ontology-91;Distribution_company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#faction -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;faction">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#fantasy -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;fantasy">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#fran_walsh -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;fran_walsh">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_producer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_screenwriter"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;lyricist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#gotoma_the_buddha -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;gotoma_the_buddha">
+        <rdf:type rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Indian_documentary_films"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;rajbans_khanna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#guest_house_(2013_film) -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;guest_house_(2013_film)">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Short_film"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;aaron_wolf"/>
+        <untitled-ontology-91:written_by rdf:resource="&untitled-ontology-91;aaron_wolf"/>
+        <untitled-ontology-91:written_by rdf:resource="&untitled-ontology-91;dan_wolf"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;pete_diFolco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#harold_eugene -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;harold_eugene">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_producer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_writer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:cause_of_death rdf:datatype="&xsd;string">pneumonia</untitled-ontology-91:cause_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#harrington_reynold -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;harrington_reynold">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#henry_cavill -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;henry_cavill">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;man_of_steel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#historical -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;historical">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#horror -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;horror">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#ian_mcKellen -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;ian_mcKellen">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;the_hobbit:_an_unexpected_journey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#jai_bhim_comrade -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;jai_bhim_comrade">
+        <rdf:type rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Indian_documentary_films"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;anand_patwardhan"/>
+        <untitled-ontology-91:won_award rdf:resource="&untitled-ontology-91;bartok_prize,jean_rouch_film_international_film_festival,_2012"/>
+        <untitled-ontology-91:won_award rdf:resource="&untitled-ontology-91;national_film_awards,_india,_2012"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#japan -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;japan"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#japanese -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;japanese">
+        <rdf:type rdf:resource="&untitled-ontology-91;Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#jimmy_sangster -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;jimmy_sangster">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_screenwriter"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_writer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:nationality_is rdf:datatype="&xsd;string">British</untitled-ontology-91:nationality_is>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#king_kong -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;king_kong">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:genres_is rdf:resource="&untitled-ontology-91;adventure"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;english"/>
+        <untitled-ontology-91:screenplay_by rdf:resource="&untitled-ontology-91;fran_walsh"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;naomi_watts"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;peter_jackson"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;united_states"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#legendary_pictures -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;legendary_pictures"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#man_of_steel -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;man_of_steel">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Reboot_films‎"/>
+        <untitled-ontology-91:based_on rdf:datatype="&xsd;string"> Characters appearing in comic books published 
+by DC Entertainment</untitled-ontology-91:based_on>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;amy_adams"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;christopher_nolan"/>
+        <untitled-ontology-91:in_language rdf:resource="&untitled-ontology-91;english"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;henry_cavill"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;legendary_pictures"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;syncopy"/>
+        <untitled-ontology-91:genres_is rdf:resource="&untitled-ontology-91;thriller"/>
+        <untitled-ontology-91:distributed_by rdf:resource="&untitled-ontology-91;warner_bros._pictures"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;zack_snyder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#martin_freeman -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;martin_freeman">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;the_hobbit:_an_unexpected_journey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#mary_elizabeth -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;mary_elizabeth">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;the_beauty_inside"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#monsters_university -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;monsters_university">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Prequel_films‎"/>
+        <untitled-ontology-91:genres_is rdf:resource="&untitled-ontology-91;animation"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;billy_crystal"/>
+        <untitled-ontology-91:genres_is rdf:resource="&untitled-ontology-91;comedy"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;dan_scanlon"/>
+        <untitled-ontology-91:in_language rdf:resource="&untitled-ontology-91;english"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;united_states"/>
+        <untitled-ontology-91:shot_at rdf:resource="&untitled-ontology-91;united_states"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#mystery -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;mystery">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#naomi_watts -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;naomi_watts">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:won_award rdf:resource="&untitled-ontology-91;chicago_film_critics_association_award"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;king_kong"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;rabbits"/>
+        <untitled-ontology-91:won_award rdf:resource="&untitled-ontology-91;saturn_award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#national_film_awards,_india,_2012 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;national_film_awards,_india,_2012">
+        <rdf:type rdf:resource="&untitled-ontology-91;Notable_award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#new_line_cinema -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;new_line_cinema">
+        <rdf:type rdf:resource="&untitled-ontology-91;Distribution_company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#new_zealand -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;new_zealand">
+        <rdf:type rdf:resource="&untitled-ontology-91;Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#new_zealand_cinema -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;new_zealand_cinema"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#nobel_prize_in_literature -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;nobel_prize_in_literature">
+        <rdf:type rdf:resource="&untitled-ontology-91;Notable_award"/>
+        <untitled-ontology-91:won_award rdf:resource="&untitled-ontology-91;nobel_prize_in_literature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#pathé_exchange -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;pathé_exchange">
+        <rdf:type rdf:resource="&untitled-ontology-91;Distribution_company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#pete_diFolco -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;pete_diFolco">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#peter_cushing -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;peter_cushing">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;dracula_(1958_film)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#peter_jackson -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;peter_jackson">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:has_spouse rdf:resource="&untitled-ontology-91;fran_walsh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#philippa_boyens -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;philippa_boyens"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#philosophical -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;philosophical">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#political -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;political">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#rabbits -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;rabbits">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Short_film"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;david_lynch"/>
+        <untitled-ontology-91:genres_is rdf:resource="&untitled-ontology-91;horror"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;naomi_watts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#rabindranath_tagore_(film) -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;rabindranath_tagore_(film)">
+        <rdf:type rdf:resource="&untitled-ontology-91;Black-and-white_documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Black-and-white_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Indian_documentary_films"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:based_on rdf:datatype="&xsd;string">Life and works of Rabindranath Tagore</untitled-ontology-91:based_on>
+        <untitled-ontology-91:genres_is rdf:resource="&untitled-ontology-91;historical"/>
+        <untitled-ontology-91:written_by rdf:resource="&untitled-ontology-91;satyajit_ray"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;satyajit_ray"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#rabindranath_thakur -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;rabindranath_thakur">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#rajbans_khanna -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;rajbans_khanna">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#realistic -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;realistic">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#richard_armitage -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;richard_armitage">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;the_hobbit:_an_unexpected_journey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#robert_francis_mcGowan -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;robert_francis_mcGowan">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_producer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:cause_of_death rdf:datatype="&xsd;string">cancer</untitled-ontology-91:cause_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#romance -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;romance">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#runaway_box -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;runaway_box"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#saturn_award -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;saturn_award">
+        <rdf:type rdf:resource="&untitled-ontology-91;Notable_award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#satyajit_ray -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;satyajit_ray">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_screenwriter"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_writer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Music_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;lyricist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#science_fiction -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;science_fiction">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#silent_film -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;silent_film">
+        <rdf:type rdf:resource="&untitled-ontology-91;Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#sky_high -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;sky_high">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Prequel_films‎"/>
+        <untitled-ontology-91:genres_is rdf:resource="&untitled-ontology-91;action"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;japan"/>
+        <untitled-ontology-91:in_language rdf:resource="&untitled-ontology-91;japanese"/>
+        <untitled-ontology-91:written_by rdf:resource="&untitled-ontology-91;tsutomu_takahashi"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;yumiko_shaku"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#star_wars:_storm_in_the_glass -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;star_wars:_storm_in_the_glass">
+        <rdf:type rdf:resource="&untitled-ontology-91;Fan_films_based_on_Star_Wars‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Fan_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#star_wars:_the_emperor&apos;s_new_clones -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;star_wars:_the_emperor&apos;s_new_clones">
+        <rdf:type rdf:resource="&untitled-ontology-91;Fan_films_based_on_Star_Wars‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Fan_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#star_wars_uncut -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;star_wars_uncut">
+        <rdf:type rdf:resource="&untitled-ontology-91;Fan_films_based_on_Star_Wars‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Fan_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;csey_pugh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#stella_southern -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;stella_southern">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#syncopy -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;syncopy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#taste_of_fear -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;taste_of_fear">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:screenplay_by rdf:resource="&untitled-ontology-91;jimmy_sangster"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#terence_fisher -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;terence_fisher">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#the_beauty_inside -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;the_beauty_inside">
+        <rdf:type rdf:resource="&untitled-ontology-91;Internet_documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Internet_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:distributed_by rdf:resource="&untitled-ontology-91;b-reel_films"/>
+        <untitled-ontology-91:distributed_by rdf:resource="&untitled-ontology-91;facebook"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;mary_elizabeth"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;winstead"/>
+        <untitled-ontology-91:distributed_by rdf:resource="&untitled-ontology-91;you_tube"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#the_birth_of_new_zealand -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;the_birth_of_new_zealand">
+        <rdf:type rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;New_Zealand_documentary_films"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;harrington_reynold"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;new_zealand"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;new_zealand_cinema"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;stella_southern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#the_great_office_war -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;the_great_office_war">
+        <rdf:type rdf:resource="&untitled-ontology-91;Internet_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;YouTube_videos‎"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;runaway_box"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#the_hobbit:_an_unexpected_journey -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;the_hobbit:_an_unexpected_journey">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Prequel_films‎"/>
+        <untitled-ontology-91:based_on rdf:datatype="&xsd;string"> The Hobbit </untitled-ontology-91:based_on>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;carolynne_cunningham"/>
+        <untitled-ontology-91:in_language rdf:resource="&untitled-ontology-91;english"/>
+        <untitled-ontology-91:screenplay_by rdf:resource="&untitled-ontology-91;fran_walsh"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;ian_mcKellen"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;martin_freeman"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;new_zealand"/>
+        <untitled-ontology-91:shot_at rdf:resource="&untitled-ontology-91;new_zealand"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;peter_jackson"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;peter_jackson"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;richard_armitage"/>
+        <untitled-ontology-91:shot_at rdf:resource="&untitled-ontology-91;united_kingdom"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;united_kingdom"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;united_states"/>
+        <untitled-ontology-91:shot_at rdf:resource="&untitled-ontology-91;united_states"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;warner_bros._pictures"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;zane_weiner_fran_walsh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#the_lord_of_the_rings_&amp;_the_hobbit -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;the_lord_of_the_rings_&amp;_the_hobbit">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Prequel_films‎"/>
+        <untitled-ontology-91:in_language rdf:resource="&untitled-ontology-91;english"/>
+        <untitled-ontology-91:distributed_by rdf:resource="&untitled-ontology-91;new_line_cinema"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;new_zealand"/>
+        <untitled-ontology-91:shot_at rdf:resource="&untitled-ontology-91;new_zealand"/>
+        <untitled-ontology-91:screenplay_by rdf:resource="&untitled-ontology-91;peter_jackson"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;peter_jackson"/>
+        <untitled-ontology-91:screenplay_by rdf:resource="&untitled-ontology-91;philippa_boyens"/>
+        <untitled-ontology-91:shot_at rdf:resource="&untitled-ontology-91;united_kingdom"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;united_kingdom"/>
+        <untitled-ontology-91:shot_at rdf:resource="&untitled-ontology-91;united_states"/>
+        <untitled-ontology-91:made_at rdf:resource="&untitled-ontology-91;united_states"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#the_princess_blade -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;the_princess_blade">
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:starring rdf:resource="&untitled-ontology-91;yumiko_shaku"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#thriller -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;thriller">
+        <rdf:type rdf:resource="&untitled-ontology-91;genres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#tsutomu_takahashi -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;tsutomu_takahashi">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_writer"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#united_kingdom -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;united_kingdom">
+        <rdf:type rdf:resource="&untitled-ontology-91;Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#united_states -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;united_states">
+        <rdf:type rdf:resource="&untitled-ontology-91;Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#war_and_peace_(2002_film) -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;war_and_peace_(2002_film)">
+        <rdf:type rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Indian_documentary_films"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <untitled-ontology-91:directed_by rdf:resource="&untitled-ontology-91;anand_patwardhan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#warner_bros._pictures -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;warner_bros._pictures">
+        <rdf:type rdf:resource="&untitled-ontology-91;Distribution_company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#west_of_memphis -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;west_of_memphis">
+        <rdf:type rdf:resource="&untitled-ontology-91;Documentary_films‎"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Movie"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;New_Zealand_documentary_films"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;damien_echols"/>
+        <untitled-ontology-91:produced_by rdf:resource="&untitled-ontology-91;peter_jackson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#winstead -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;winstead">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;the_beauty_inside"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#yahoo!_video_award -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;yahoo!_video_award">
+        <rdf:type rdf:resource="&untitled-ontology-91;Notable_award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#you_tube -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;you_tube">
+        <rdf:type rdf:resource="&untitled-ontology-91;Distribution_company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#yumiko_shaku -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;yumiko_shaku">
+        <rdf:type rdf:resource="&untitled-ontology-91;Actor"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;sky_high"/>
+        <untitled-ontology-91:acted_in rdf:resource="&untitled-ontology-91;the_princess_blade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#zack_snyder -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;zack_snyder">
+        <rdf:type rdf:resource="&untitled-ontology-91;Film_director"/>
+        <rdf:type rdf:resource="&untitled-ontology-91;Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinu/ontologies/2014/6/untitled-ontology-91#zane_weiner_fran_walsh -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-91;zane_weiner_fran_walsh"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
