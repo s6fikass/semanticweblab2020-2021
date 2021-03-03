@@ -59,7 +59,7 @@ User installation
 Documentation
 ----------------
 .. _onto_doc: https://github.com/s6fikass/semanticweblab2020-2021/blob/master/Code/Implement%20and%20design%20a%20machine%20learning%20hierarchy%20wrapper%20for%20SimpleML/docs/Ontology%20Structure.md
-.. _tutorial: /master/Code/Implement%20and%20design%20a%20machine%20learning%20hierarchy%20wrapper%20for%20SimpleML/docs/API.md
+.. _tutorial: https://github.com/s6fikass/semanticweblab2020-2021/blob/master/Code/Implement%20and%20design%20a%20machine%20learning%20hierarchy%20wrapper%20for%20SimpleML/docs/API.md
 
 - Ontology documentation is available `here <onto_doc_>`_
 
